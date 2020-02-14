@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Design Pattern Builder</Title>
+	  <Author>Lê Hoàng Phan</Author>
+	  <Description>Builder code snippet</Description>
+      <Shortcut>dpbuilder_simple</Shortcut>
+    </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">>
+                    <ID>BuiltClass</ID>
+					<ToolTip>Class need to build's Name</ToolTip>
+                    <Default>BuiltClass</Default>
+                </Literal> 			
+            </Declarations>        
+     <Code Language="CSharp" Format="CData">
+                <![CDATA[
+					public class $end$$BuiltClass$
+					{
+						public int prop1;
+						public string prop2;
+					}
+                    public class $BuiltClass$Builder
+                    {
+                        private $BuiltClass$ $BuiltClass$ { get; set; }
+						
+						public $BuiltClass$ BuildMethod1()
+						{
+							return new $BuiltClass$();
+						}
+						public $BuiltClass$ BuildMethod2(int a, string b)
+						{
+							return new $BuiltClass$();
+						}
+                    }
+                ]]>
+       </Code>
+		</Snippet>
+		</CodeSnippet>
+</CodeSnippets>

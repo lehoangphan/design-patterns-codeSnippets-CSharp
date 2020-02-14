@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Design Pattern Prototype</Title>
+	  <Author>Lê Hoàng Phan</Author>
+	  <Description>Prototype code snippet</Description>
+      <Shortcut>dpprototype_simple</Shortcut>
+    </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">>
+                    <ID>ClonableClass</ID>
+					<ToolTip>Clonable class</ToolTip>
+                    <Default>ClonableClass</Default>
+                </Literal> 			
+            </Declarations>        
+     <Code Language="CSharp" Format="CData">
+                <![CDATA[
+					public class $end$$ClonableClass$
+					{
+						public int prop1 {get;set;}
+						public string prop2 {get;set;}
+						public $ClonableClass$ Clone()
+						{
+							return new $ClonableClass$ {
+								prop1 = this.prop1,
+								prop2 = this.prop2
+							};
+						}
+					}
+					public class Client
+					{
+						public void CloneSomeThing()
+						{
+						var $ClonableClass$ = new $ClonableClass$().Clone();
+						}
+						
+					}
+                    
+                ]]>
+       </Code>
+		</Snippet>
+		</CodeSnippet>
+</CodeSnippets>

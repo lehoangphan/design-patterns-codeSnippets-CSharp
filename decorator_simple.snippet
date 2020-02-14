@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Design Pattern Decorator</Title>
+	  <Author>Lê Hoàng Phan</Author>
+	  <Description>Decorator code snippet</Description>
+      <Shortcut>dpdecorator_simple</Shortcut>
+    </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">>
+                    <ID>BaseClass</ID>
+					<ToolTip>Base class, decorator will decorate this class</ToolTip>
+                    <Default>BaseClass</Default>
+                </Literal> 			
+            </Declarations>        
+     <Code Language="CSharp" Format="CData">
+                <![CDATA[
+					public class $end$$BaseClass$
+					{
+						public void DoSomeThing() 
+						{
+						}
+					}
+					public class $BaseClass$Decorator1 : $BaseClass$
+					{
+						public $BaseClass$ $BaseClass$ {get	; set; }
+						
+						public $BaseClass$Decorator1($BaseClass$ $BaseClass$) => this.$BaseClass$ = $BaseClass$;
+						
+						public overide void DoSomeThing()
+						{
+						}
+					}
+					public class $BaseClass$Decorator2 : $BaseClass$
+					{
+						public $BaseClass$ $BaseClass$ {get	; set; }
+						
+						public $BaseClass$Decorator2($BaseClass$ $BaseClass$) => this.$BaseClass$ = $BaseClass$;
+					
+						public override void DoSomeThing()
+						{
+						}
+					}
+                ]]>
+       </Code>
+		</Snippet>
+		</CodeSnippet>
+</CodeSnippets>

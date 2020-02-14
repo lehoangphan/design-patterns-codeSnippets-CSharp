@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Design Pattern Facade</Title>
+	  <Author>Lê Hoàng Phan</Author>
+	  <Description>Facade code snippet</Description>
+      <Shortcut>dpfacade_simple</Shortcut>
+    </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">>
+                    <ID>FacadeClass</ID>
+					<ToolTip>FacadeClass, this is will be the Facade of child system</ToolTip>
+                    <Default></Default>
+                </Literal> 			
+            </Declarations>        
+     <Code Language="CSharp" Format="CData">
+                <![CDATA[
+						public class $end$$FacadeClass$Facade
+						{
+							public ChildSystem1 cs1 {get;set;} 
+							public ChildSystem2 cs2 {get; set;} 
+							public void Operation1(){
+								cs1.DoSomeThing1(); 
+								cs2.DoSomeThing2();
+							}
+							public void Operation2()
+							{
+								cs2.DoSomeThing2();
+								cs1.DoSomeThing1(); 
+							}
+						}
+						public class ChildSystem1
+						{
+							private void DoSomeThing1(){}
+						}
+						public class ChildSystem2
+						{
+							private void DoSomeThing2(){}
+						}
+                ]]>
+       </Code>
+		</Snippet>
+		</CodeSnippet>
+</CodeSnippets>
